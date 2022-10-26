@@ -627,6 +627,9 @@ footer img {
     body {
         font-size: 11px;
     }
+    .text-network{
+        width: 72% !important;
+    }
     .fff{
         margin-bottom: -13px !important;
     }
@@ -649,7 +652,7 @@ footer img {
         ;
     }
     .text-slider_titel{
-        width: 150px !important;
+        width: 180px !important;
     }
     .text-slider_titel1{
         width: 150px !important;
