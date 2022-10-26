@@ -81,16 +81,13 @@ header {
     margin-top: -107px !important;
     margin-bottom: -99px !important;
 }
-.tab-content{
-
-}
 .text-backgroup {
     width: 100%;
     font-size: 189px;
     font-weight: 900;
     color: rgba(255, 255, 255, 0.1);
     text-align: center;
-    margin-bottom: -8rem !important;
+    margin-bottom: -10rem !important;
     user-select: none;
     position: relative;
     z-index: 0;
@@ -135,7 +132,7 @@ header {
 .nav {
     display: flex;
     justify-content: space-evenly;
-    transform: translateY(130px);
+    transform: translateY(137px);
 }
 
 .nav-pills .nav-link.active,
@@ -356,7 +353,7 @@ span.arrow {
 }
 
 .slider_img {
-    width: 600px;
+    box-shadow: 1px 1px 5px 1px #8b8b8b;
 }
 
 .text_titel {
@@ -510,6 +507,7 @@ span.arrow {
 /* csss slider2 */
 .slide_inner4 {
     display: flex;
+    padding: 10px 0;
 }
 
 .slider_wrapper1 {
@@ -518,10 +516,10 @@ span.arrow {
 
 .text_slider2 {
     padding: 0 30px;
-    transform: translateX(240px);
-    width:  375px;
 }
-
+p{
+    margin: 0;
+}
 .title_side2>.slick-dots {
     margin: 25px 0 -23px;
     display: flex;
