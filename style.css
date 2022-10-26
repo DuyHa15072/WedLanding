@@ -548,6 +548,7 @@ p{
     border: none;
     margin-left: 10px;
     font-size: 16px;
+    font-weight: 500;
 }
 
 .title_side2>.slick-dots li button:before {
@@ -628,7 +629,7 @@ footer img {
         font-size: 11px;
     }
     .text-network{
-        width: 72% !important;
+        width: 68% !important;
     }
     .fff{
         margin-bottom: -13px !important;
@@ -652,7 +653,7 @@ footer img {
         ;
     }
     .text-slider_titel{
-        width: 180px !important;
+        width: 156px !important;
     }
     .text-slider_titel1{
         width: 150px !important;
@@ -774,7 +775,7 @@ footer img {
     }
 
     .text_slider4 h2 {
-        font-size: 16px;
+        font-size: 14px;
     }
     .text_slider2 h2 {
         text-align: center !important;
