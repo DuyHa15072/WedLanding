@@ -95,14 +95,24 @@ $().ready(function () {
             body: JSON.stringify(data),
           })
             .then((response) => response.json())
-            .then(
-              swal({
-                title: "THÀNH CÔNG",
-                text: "Chúng tôi sẽ liên hệ đến bạn trong thời gian sớm nhất",
-                text:"Xin cảm ơn!",
-                icon: "success",
-                button: "Close",
-              }),
+            .then( data => {
+              if(data === 'success'){
+                swal({
+                  title: "THÀNH CÔNG",
+                  text: "Chúng tôi sẽ liên hệ đến bạn trong thời gian sớm nhất",
+                  text:"Xin cảm ơn!",
+                  icon: "success",
+                  button: "Close",
+                })
+              }else{
+                swal({
+                  title: "Thất bại",
+                  text: "Lỗi, Thủ lại sau.",
+                  icon: "error",
+                  button: "Close",
+                })
+              }
+            }
             )
             .then({
               "Tên": document.querySelector("#name").value = "",
@@ -112,7 +122,12 @@ $().ready(function () {
             "Số Điện Thoại": document.querySelector("#phone").value = "",
             })
             .catch((error) => {
-              console.error('Error:', error);
+              swal({
+                title: "Thất bại",
+                text: "Lỗi, Thủ lại sau.",
+                icon: "error",
+                button: "Close",
+              })
             });
       }
       
