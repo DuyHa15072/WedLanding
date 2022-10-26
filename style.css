@@ -133,6 +133,9 @@ header {
     display: flex;
     justify-content: space-evenly;
     transform: translateY(137px);
+    position: relative;
+    z-index: 1;
+
 }
 
 .nav-pills .nav-link.active,
