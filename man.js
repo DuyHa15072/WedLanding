@@ -80,6 +80,15 @@ $().ready(function () {
       }
     },
     submitHandler: function() {
+
+
+        swal({
+            title:"", 
+            text:"Loading...",
+            buttons: false,      
+            closeOnClickOutside: false,
+        });
+     
       const data = {
             "Tên": document.querySelector("#name").value,
             "Đơn vị/Công ty": document.querySelector("#Unit").value,
@@ -96,7 +105,8 @@ $().ready(function () {
           })
             .then((response) => response.json())
             .then( data => {
-              if(data === 'success'){
+              
+              if(data.data === 'success'){
                 swal({
                   title: "THÀNH CÔNG",
                   text: "Chúng tôi sẽ liên hệ đến bạn trong thời gian sớm nhất",
@@ -107,7 +117,7 @@ $().ready(function () {
               }else{
                 swal({
                   title: "Thất bại",
-                  text: "Lỗi, Thủ lại sau.",
+                  text: "Lỗi, Thử lại.",
                   icon: "error",
                   button: "Close",
                 })
@@ -160,26 +170,3 @@ function backToTop() {
   document.documentElement.scrollTop = 0;
 }
 
-
-function getOffset(el) {
-  var _x = 0;
-  var _y = 0;
-  while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
-      _x += el.offsetLeft - el.scrollLeft;
-      _y += el.offsetTop - el.scrollTop;
-      el = el.offsetParent;
-  }
-  return { top: _y, left: _x };
-}
-var x = getOffset(document.getElementById('show_slider3')).left;
-var y = getOffset(document.getElementById('show_slider3')).top;
-
-var pod = 6713;
-if (pod == y) {
-     var element = document.getElementById("show_slider3");
-        element.classList.add("to");
-        setTimeout(alertFunc, 3000)
-        function alertFunc() {
-            element.classList.remove("to");
-        }
-} 
