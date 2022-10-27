@@ -645,7 +645,10 @@ footer img {
     body {
         font-size: 11px;
     }
+    .text-socol{
+        transform: translateY(-15px) !important;
 
+     }
     .text-network {
         padding-right: 12px !important;
     }
@@ -655,7 +658,7 @@ footer img {
         margin-right: 28px;
     }
     .text-n{
-        transform: translateY(0);
+        transform: translateY(-15px)!important;
     }
     .fff {
         margin-bottom: -13px !important;
@@ -832,12 +835,15 @@ footer img {
     .fff {
         margin-bottom: -13px !important;
     }
+     .text-socol{
+        transform: translateY(-15px);
 
+     }
     .tiltle h1 {
         font-size: 37px;
     }
     .text-n{
-        transform: translateY(0);
+        transform: translateY(-17px);
     }
     .text-welcome {
         font-size: 36px;
