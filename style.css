@@ -244,7 +244,11 @@ input:-internal-autofill-selected {
     border: 1px solid white;
     border-radius: 3px;
 }
-
+.btn_submit:hover{
+   color: white;
+   border:1px solid #F7C51E;
+   background-color: #F7C518;
+}
 .footer_contact {
     background: url("./img/Group\ 10.png") center/cover;
     background-repeat: no-repeat;
