@@ -40,7 +40,7 @@ jQuery(document).ready(function () {
 })
 
 // validate
-$().ready(function () {
+
   $("#fromContact").validate({
     rules: {
       "name": {
@@ -143,7 +143,6 @@ $().ready(function () {
       
   })
   
-})
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
 
