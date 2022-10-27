@@ -35,7 +35,7 @@ jQuery(document).ready(function () {
   $('.single-item').slick({
     dots: true,
     nextArrow: '.show4.next',
-    prevArrow: '.show4 .prev',
+    prevArrow: '.show4.prev',
   });
 })
 
