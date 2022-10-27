@@ -915,7 +915,7 @@ footer img {
     }
 
     .title_side2>.slick-dots li button {
-        font-size: 14px;
+        font-size: 18px;
 
     }
 
@@ -930,7 +930,7 @@ footer img {
     }
 
     .title_side2>.slick-dots {
-        bottom: -25px !important;
+        bottom: -70px !important;
     }
 
     .text-slider_titel {
