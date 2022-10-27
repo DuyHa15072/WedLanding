@@ -39,42 +39,41 @@ jQuery(document).ready(function () {
   });
 })
 
-// validate
-
+// validated
   $("#fromContact").validate({
     rules: {
-      "name": {
+      name: {
         required: true,
       },
-      "Unit": {
+      Unit: {
         required: true,
       },
-      "position": {
+      position: {
         required: true
       },
-      "email": {
+      email: {
         required: true
       },
-      "phone": {
+      phone: {
         required: true,
         minlength: 10,
       }
     },
     messages: {
-      "name": {
+      name: {
         required: "Bắt buộc nhập Tên",
       },
-      "Unit": {
+      Unit: {
         required: "Bắt buộc nhập Đơn vị/Công ty",
       },
-      "position": {
+      position: {
         required: "Bắt buộc nhập Chức vụ",
       },
-      "email": {
+      email: {
         required: "Bắt buộc nhập Email",
         email: 'Nhập đúng email'
       },
-      "phone": {
+      phone: {
         required: "Bắt buộc nhập số điện thoại",
         minlength: "Phải nhập đủ 10 số",
       }
