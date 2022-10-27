@@ -277,7 +277,6 @@ input:-internal-autofill-selected {
 }
 
 .footer_contact nav ul li svg {
-    margin-right: 10px;
     width: 27px;
 }
 
@@ -654,7 +653,9 @@ footer img {
         padding-right: 12px !important;
         padding-left: 15px !important;
     }
-
+    .text-footer-contact{
+        padding-left: 8px;
+    }
     .text_cocital {
         width: 97%;
         margin-right: 28px;
@@ -843,6 +844,9 @@ footer img {
         transform: translateY(-15px);
 
      }
+     .text-footer-contact{
+        padding-left: 16px;
+    }
     .tiltle h1 {
         font-size: 37px;
     }
