@@ -646,11 +646,12 @@ footer img {
         font-size: 11px;
     }
     .text-socol{
-        transform: translateY(-15px) !important;
+        transform: translateY(-22px) !important;
 
      }
     .text-network {
         padding-right: 12px !important;
+        padding-left: 15px !important;
     }
 
     .text_cocital {
@@ -863,7 +864,7 @@ footer img {
 
     .logo img {
         max-width: 25%;
-    }
+    } 15px;
 
     .img_slider2 {
         width: 100%;
