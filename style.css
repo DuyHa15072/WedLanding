@@ -278,6 +278,7 @@ input:-internal-autofill-selected {
 
 .footer_contact nav ul li svg {
     margin-right: 10px;
+    width: 27px;
 }
 
 .footer-working-hour-support {
