@@ -254,7 +254,7 @@ input:-internal-autofill-selected {
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
-    top: -54px;
+    top: -65px;
     padding: 35px 10px;
 }
 
@@ -967,6 +967,10 @@ footer img {
 
     .text-slider_titel1 {
         width: 288px !important;
+    }
+    .footer_contact {
+       
+        top: -48px;
     }
 }
 
