@@ -95,7 +95,7 @@ jQuery(document).ready(function () {
             "Email": document.querySelector("#email").value,
             "Số Điện Thoại": document.querySelector("#phone").value,
           };
-          fetch('http://192.168.1.57:8888/api/contact-mail', {
+          fetch('https://sendmail.oeg.vn/api/contact-mail/phuonghh@oeg.vn', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
