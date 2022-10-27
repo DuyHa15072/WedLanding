@@ -790,12 +790,14 @@ footer img {
     }
 
     .title_side2>.slick-dots li button {
-        font-size: 10px;
+        font-size: 20px !important;
         margin: 0 !important;
+        padding: 30px;
     }
 
     .title_side2>.slick-dots {
-        bottom: -60px;
+        bottom: -10px;
+        position: relative !important;
     }
 
     .text-p {
@@ -864,8 +866,7 @@ footer img {
 
     .logo img {
         max-width: 25%;
-    } 15px;
-
+    } 
     .img_slider2 {
         width: 100%;
     }
