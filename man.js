@@ -57,7 +57,7 @@ $().ready(function () {
       },
       "phone": {
         required: true,
-        minlength: 10
+        minlength: 10,
       }
     },
     messages: {
@@ -76,7 +76,7 @@ $().ready(function () {
       },
       "phone": {
         required: "Bắt buộc nhập số điện thoại",
-        minlength: "Phải nhập đủ 10 số"
+        minlength: "Phải nhập đủ 10 số",
       }
     },
     submitHandler: function() {

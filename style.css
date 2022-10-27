@@ -415,9 +415,15 @@ span.arrow {
 }
 
 .botton_contact:hover {
-    background-color: #FFE62E;
+    color: white;
+    background: #F7C518;
+    border:1px solid #F7C51E;
 }
-
+.butom_footer:hover{
+    color: white;
+    background: #F7C518;
+    border:1px solid #F7C51E;
+}
 .col_1 {
     font-size: 30px;
     font-weight: 700;
@@ -637,7 +643,7 @@ footer img {
     }
 
     .text-network {
-        width: 74% !important;
+        padding-right: 18px !important;
     }
 
     .text_cocital {
