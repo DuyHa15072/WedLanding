@@ -40,112 +40,111 @@ jQuery(document).ready(function () {
 })
 
 // validated
-  $("#fromContact").validate({
-    rules: {
-      name: {
-        required: true,
-      },
-      Unit: {
-        required: true,
-      },
-      position: {
-        required: true
-      },
-      email: {
-        required: true
-      },
-      phone: {
-        required: true,
-        minlength: 10,
-      }
+$("#fromContact").validate({
+  rules: {
+    name: {
+      required: true,
     },
-    messages: {
-      name: {
-        required: "Bắt buộc nhập Tên",
-      },
-      Unit: {
-        required: "Bắt buộc nhập Đơn vị/Công ty",
-      },
-      position: {
-        required: "Bắt buộc nhập Chức vụ",
-      },
-      email: {
-        required: "Bắt buộc nhập Email",
-        email: 'Nhập đúng email'
-      },
-      phone: {
-        required: "Bắt buộc nhập số điện thoại",
-        minlength: "Phải nhập đủ 10 số",
-      }
+    Unit: {
+      required: true,
     },
-    submitHandler: function() {
+    position: {
+      required: true
+    },
+    email: {
+      required: true
+    },
+    phone: {
+      required: true,
+      minlength: 10,
+    }
+  },
+  messages: {
+    name: {
+      required: "Bắt buộc nhập Tên",
+    },
+    Unit: {
+      required: "Bắt buộc nhập Đơn vị/Công ty",
+    },
+    position: {
+      required: "Bắt buộc nhập Chức vụ",
+    },
+    email: {
+      required: "Bắt buộc nhập Email",
+      email: 'Nhập đúng email'
+    },
+    phone: {
+      required: "Bắt buộc nhập số điện thoại",
+      minlength: "Phải nhập đủ 10 số",
+    }
+  },
+  submitHandler: function () {
 
 
-        swal({
-            title:"", 
-            text:"Loading...",
-            buttons: false,      
-            closeOnClickOutside: false,
-        });
-     
-      const data = {
-            "Tên": document.querySelector("#name").value,
-            "Đơn vị/Công ty": document.querySelector("#Unit").value,
-            "Chức Vụ": document.querySelector("#position").value,
-            "Email": document.querySelector("#email").value,
-            "Số Điện Thoại": document.querySelector("#phone").value,
-          };
-          fetch('https://sendmail.oeg.vn/api/contact-mail/phuonghh@oeg.vn', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
+    swal({
+      title: "",
+      text: "Loading...",
+      buttons: false,
+      closeOnClickOutside: false,
+    });
+
+    const data = {
+      "Tên": document.querySelector("#name").value,
+      "Đơn vị/Công ty": document.querySelector("#Unit").value,
+      "Chức Vụ": document.querySelector("#position").value,
+      "Email": document.querySelector("#email").value,
+      "Số Điện Thoại": document.querySelector("#phone").value,
+    };
+    fetch('https://sendmail.oeg.vn/api/contact-mail/phuonghh@oeg.vn', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then(data => {
+
+        if (data.data === 'success') {
+          swal({
+            title: "THÀNH CÔNG",
+            text: "Chúng tôi sẽ liên hệ đến bạn trong thời gian sớm nhất",
+            text: "Xin cảm ơn!",
+            icon: "success",
+            button: "Close",
           })
-            .then((response) => response.json())
-            .then( data => {
-              
-              if(data.data === 'success'){
-                swal({
-                  title: "THÀNH CÔNG",
-                  text: "Chúng tôi sẽ liên hệ đến bạn trong thời gian sớm nhất",
-                  text:"Xin cảm ơn!",
-                  icon: "success",
-                  button: "Close",
-                })
-              }else{
-                swal({
-                  title: "Thất bại",
-                  text: "Lỗi, Thử lại.",
-                  icon: "error",
-                  button: "Close",
-                })
-              }
-            }
-            )
-            .then({
-              "Tên": document.querySelector("#name").value = "",
-            "Đơn vị/Công ty": document.querySelector("#Unit").value = "",
-            "Chức Vụ": document.querySelector("#position").value = "",
-            "Email": document.querySelector("#email").value = "",
-            "Số Điện Thoại": document.querySelector("#phone").value = "",
-            })
-            .catch((error) => {
-              swal({
-                title: "Thất bại",
-                text: "Lỗi, Thủ lại sau.",
-                icon: "error",
-                button: "Close",
-              })
-            });
+        } else {
+          swal({
+            title: "Thất bại",
+            text: "Lỗi, Thử lại.",
+            icon: "error",
+            button: "Close",
+          })
+        }
       }
-      
-  })
-  
-//Get the button
+      )
+      .then({
+        "Tên": document.querySelector("#name").value = "",
+        "Đơn vị/Công ty": document.querySelector("#Unit").value = "",
+        "Chức Vụ": document.querySelector("#position").value = "",
+        "Email": document.querySelector("#email").value = "",
+        "Số Điện Thoại": document.querySelector("#phone").value = "",
+      })
+      .catch((error) => {
+        swal({
+          title: "Thất bại",
+          text: "Lỗi, Thủ lại sau.",
+          icon: "error",
+          button: "Close",
+        })
+      });
+  }
+
+})
+
+
 let mybutton = document.getElementById("btn-back-to-top");
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
 };
@@ -160,7 +159,7 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
-// When the user clicks on the button, scroll to the top of the document
+
 mybutton.addEventListener("click", backToTop);
 
 function backToTop() {
