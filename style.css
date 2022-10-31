@@ -417,10 +417,8 @@ span.arrow {
     text-align: center;
     min-width: 208px;
 }
-.botton_contact{
-    color: #0000;
-}
-.botton_contact:hover {
+
+.botton_contact a:hover {
     color: white !important ;
     background: #e3b306;
     border:1px solid #F7C51E;
