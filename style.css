@@ -418,15 +418,22 @@ span.arrow {
     min-width: 208px;
 }
 
-.botton_contact a:hover {
-    color: white !important ;
-    background: #e3b306;
-    border:1px solid #F7C51E;
-}
 .butom_footer:hover{
     color: white !important;
     background: #e3b306;
     border:1px solid #F7C51E;
+}
+.botton_contact:hover{
+    color: white !important;
+    background: #e3b306;
+    border:1px solid #F7C51E;
+}
+.botton_contact a:hover{
+    color: white !important;
+    background: #e3b306;
+}
+.botton_contact a{
+    padding: 10px;
 }
 .col_1 {
     font-size: 30px;
@@ -468,7 +475,6 @@ span.arrow {
     margin: auto;
     display: block;
     background-color: #F7C51E;
-    padding: 10px;
     border: 1px solid;
     border-radius: 3px;
     color: black;
